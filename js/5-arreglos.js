@@ -32,10 +32,19 @@ for(let posicion = 0; posicion < series.length ; posicion++ ){
     document.write('<br>'+ series[posicion]);
 }
 
+//eliminar último elemento del array
+
+series.pop();
+
 // eliminar un elemento del arreglo
 series.splice(5,1); //(posicion del elemento, cantidad de elementos a borrar)
 // series.splice(4); //(posicion del elemento desde el que quiero eliminar, el resto hacia la derecha)
 mostrarArreglo('eliminar un elemento de una posicion particular del arreglo')
+
+
+//buscar un elemento en el array; Si el elemento no se encuentra , devuelve False
+series.includes('vikings')
+
 
 // modificar un valor del arreglo
 series[4] = 'friends';
