@@ -20,10 +20,19 @@ mostrarArreglo('<br><br><b>Arreglo series con nuevo elemento</b><br>');
 series.splice(1, 0,'GOT'); //(posicion del elemento, cantidad de elementos a borrar, el elemento que quiero agregar)
 mostrarArreglo('<br><br><b>agregar un elemento en una posicion particular</b><br>');
 
+//eliminar último elemento del array
+
+series.pop();
+
 // eliminar un elemento del arreglo
 series.splice(5,1); //(posicion del elemento, cantidad de elementos a borrar)
 // series.splice(4); //(posicion del elemento desde el que quiero eliminar, el resto hacia la derecha)
 mostrarArreglo('eliminar un elemento de una posicion particular del arreglo')
+
+
+//buscar un elemento en el array; Si el elemento no se encuentra , devuelve False
+series.includes('vikings')
+
 
 // modificar un valor del arreglo
 series[4] = 'friends';
