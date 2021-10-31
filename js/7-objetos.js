@@ -33,9 +33,28 @@ console.log(usuario1)
 
     //Borrar una propiedad de un objeto
     delete usuario1.state
+
     
-//usar metodos
-usuario1.login();
+    //usar metodos
+    usuario1.login();
+    
+    //mostrar todas las propiedad del Objeto por consola
+    // console.log(usuario1);
+
+    //mostrar todas las propiedas del obj por interfaz ***
+    let claves = Object.keys(usuario1);
+    console.log(claves);
+    for (let i = 0; i < claves.length; i++) {
+        
+        // document.write('<br>' + claves[i]);     
+          // Mostrar todas las propiedad del Objeto y sus valores
+        document.write('<br>' + claves[i] +': ' + usuario1[claves[i]]);    
+    }
+
+  
+   
+
+
 
 
     

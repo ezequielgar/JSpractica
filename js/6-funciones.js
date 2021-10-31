@@ -4,6 +4,7 @@ function saludar(){
     document.write('hola mundo');
 }
 
+
 //funciones con parametros
 function saludo(nombre, apellido){
     let edad;
@@ -41,4 +42,5 @@ let pesos = convertirDolaresAPesos(1000);
 
 document.write('<br>Producto: Iphone X $'+pesos);
 document.write('<br>Producto: xiami redmi note 9 pro, $'+convertirDolaresAPesos(300));
+
 
