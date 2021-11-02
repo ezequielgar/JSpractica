@@ -29,8 +29,43 @@ class Usuario {
  mostrarEdad(){}
  mostrarHabilitacion(){}
 
+ //crear propiedades conmutadas GET(muestra propiedades) y SET (modifica propiedades)
+ get mostrarNombre(){
+   return this.nombre;
+ }
+
+ get mostrarApellido(){
+   return this.apellido;
+ }
+
+ set modifName(newName){
+   this.nombre = newName;
+ }
+
+ set modifLastName(newLastName){
+   this.apellido = newLastName ;
+ }
 
 }
+
+// herencia
+
+class Alumno extends Usuario {
+  constructor (name, LastName, email, age, dni, ProfilePic, adress , curso , legajo) {
+    // invoco al contructor de Usuario
+    super (name, LastName, email, age, dni, ProfilePic, adress)
+    // se agregan las nuevas propiedades de la clase de herencia
+    this.curso = curso;
+    this.legajo = legajo;
+    this.calificaciones = [];
+
+
+  }
+
+
+
+}
+
 
 // COMO CREAR UN OBJETO , CREAR INSTANCIAR
 let ezequiel = new Usuario('Ezequiel','Garcia','ezequielgarqgmail.com', 31,34285409,'url','aqui va la dire');
@@ -38,3 +73,9 @@ console.log(ezequiel);
 
 // Usar metodos de la clase Usuario
 ezequiel.mostrarDatos();
+
+document.write(`<br><h6>Apellido y Nombre: ${ezequiel.mostrarNombre} ${ezequiel.mostrarApellido} </h6>`);
+
+ezequiel.modifName = 'Nicolas';
+
+document.write(`<h6>Apellido y Nombre: ${ezequiel.mostrarNombre} ${ezequiel.mostrarApellido} </h6>`);
